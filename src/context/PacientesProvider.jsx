@@ -6,6 +6,7 @@ const PacientesContext = createContext() //Creamos un cotext para poder usarlo e
 export function PacientesProvider({children}) { //Creamos una funcion provider donde se crearan todas las variables y funciones del context
 
   useEffect( () => { //Use effect que obtiene de la base de datos todos los pacientes del veterinario que accedió
+    console.log('desde effect');
     const obtenerPacientes = async () => {
       const token = localStorage.getItem('token') //Obtenemos el token del local storage
 
